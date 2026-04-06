@@ -1,0 +1,44 @@
+{
+  "name": "stitchdb",
+  "version": "1.2.0",
+  "description": "StitchDB client for JavaScript and TypeScript",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "stitchdb",
+    "database",
+    "sql",
+    "edge",
+    "serverless"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "StitchDB",
+    "email": "support@stitchdb.com",
+    "url": "https://stitchdb.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stitchdb/js.git"
+  },
+  "homepage": "https://stitchdb.com/docs",
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
